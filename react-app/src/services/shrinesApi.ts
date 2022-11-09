@@ -2,7 +2,7 @@ import {ShrineDto} from "types/dtos";
 
 
 export async function getShrinesApi(amount : number) : Promise<Array<ShrineDto>> {
-    var returnArray : ShrineDto[] = [];
+    const returnArray: ShrineDto[] = [];
 
     for (let i = 0; i < amount; i++) {
         returnArray.push({
