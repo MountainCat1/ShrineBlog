@@ -26,7 +26,7 @@ export default function (){
 
         <div className={'entries-container'}>
             {shrines?.map((shrineDto) => (
-                <ShrineEntry shrineDto={shrineDto}/>
+                <ShrineEntry key={shrineDto.guid} shrineDto={shrineDto}/>
             ))}
         </div>
 

@@ -22,7 +22,7 @@ const ShrineEntry: React.FC<ShrineEntryProps> =(
             <img src={shrineDto?.imageUrl} alt={'shrine image'}/>
             <NavLink
                 className = 'shrine-entry-button'
-                to={(`/shrine/${shrineDto?.guid}`)}>
+                to={(`/shrine?guid=${shrineDto?.guid}`)}>
                 <span className={'shrine-entry-button-text'}>Więcej</span>
             </NavLink>
         </div>
