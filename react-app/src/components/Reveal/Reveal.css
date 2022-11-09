@@ -1,0 +1,13 @@
+.reveal {
+    opacity: 0;
+    transform: translate(-50%, 0);
+
+}
+
+.revealed {
+    transform: translate(0, 0);
+
+    opacity: 1;
+
+    transition: 1s;
+}

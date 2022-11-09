@@ -1,0 +1,44 @@
+:root {
+    --color-0: #565151;
+    --color-1: #2f2f2f;
+    --color-2: #2c2c2c;
+    --color-3: #3a3838;
+    --color-4: #1c1c1c;
+
+    --font-color: #ffffff;
+    --font-color-dark: #3a3a3a;
+    --font-color-2: #afafaf;
+
+    --font-size-1: 22px;
+    --font-size-2: 18px;
+
+    --gradient-repating: 2000px;
+
+    --gradient-color-1: rgba(131, 58, 180, 1);
+    --gradient-color-2: rgb(218, 33, 33);
+    --gradient-color-3: rgba(252, 176, 69, 1);
+
+    --gradient-1: repeating-linear-gradient(
+            to bottom right,
+            var(--gradient-color-1) calc(var(--gradient-repating) * 1),
+            var(--gradient-color-3) calc(var(--gradient-repating) * 2),
+            var(--gradient-color-2) calc(var(--gradient-repating) * 3),
+            var(--gradient-color-1) calc(var(--gradient-repating) * 4)
+    );
+
+    --gradient-2: linear-gradient(-45deg,
+    var(--gradient-color-1) 0%,
+    var(--gradient-color-3) 50%,
+    var(--gradient-color-1) 100%);
+
+    --gradient-3: linear-gradient(-45deg,
+    var(--gradient-color-1) 25%,
+    var(--gradient-color-2) 50%,
+    var(--gradient-color-3) 75%);
+
+    --gradient-4: repeating-linear-gradient(
+            45deg,
+            var(--gradient-color-3) 0%,
+            var(--gradient-color-2) 50%,
+            var(--gradient-color-1) 100%);
+}

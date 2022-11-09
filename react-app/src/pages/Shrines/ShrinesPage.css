@@ -1,0 +1,22 @@
+/*
+    This whole file DOES require refactoring
+
+    also in .card i didnt use border-radius coz it completely doesnt work with
+    overflow: hidden for some f@cking reason
+*/
+
+
+:root {
+    --dark-from-bottom-gradient:
+            linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.75) 55%, rgba(0,0,0,0) 100%);
+}
+
+.entries-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
+    width: 100%;
+}
+
+

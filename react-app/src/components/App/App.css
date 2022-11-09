@@ -1,0 +1,16 @@
+:root {
+  --navbar-height: 3rem;
+
+  --page-width: 59rem;
+}
+
+.App {
+  min-height: 100vh;
+
+  color: var(--font-color);
+}
+
+body {
+  /* Cool gradient */
+  background-image: var(--gradient-1);
+}

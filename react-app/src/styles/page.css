@@ -1,0 +1,142 @@
+
+.page {
+    background-color: var(--color-1);
+
+    margin: 0 auto;
+    overflow: hidden;
+
+    max-width: var(--page-width);
+    min-height: 100vh;
+
+    font-size: var(--font-size-2);
+
+    box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.51);
+}
+
+.page-content {
+    padding-top: calc( var(--navbar-height) ) ;
+
+    padding-right:  2em;
+    padding-left:  2em;
+}
+
+/* === Page transition === */
+
+.page-content {
+    animation: fadeIn 300ms;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(3em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0em);
+    }
+}
+
+
+
+.page-enter {
+    opacity: 0;
+    transform: translateY(3em);
+}
+.page-enter-active {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+    transition: 500ms ease;
+}
+.page-exit {
+    opacity: 0;
+}
+.page-exit-active {
+    opacity: 0;
+}
+/*=== /// ===*/
+
+.gradient-border {
+    position: relative;
+
+    padding: 0.2rem;
+
+    overflow: hidden;
+
+    border-radius: 3px;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.gradient-border::before {
+    content: '';
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 90em;
+    height: 90em;
+    background: var(--gradient-1);
+    background-repeat: no-repeat;
+
+    /* Uncomment this line to get animated border effect */
+    /* Now its disabled bcs literally nobody notices it  */
+/*    animation: rotate-in-center 1s linear infinite;*/
+}
+
+
+.gradient-border-content {
+    position: relative;
+
+    padding: 2em;
+    height: 100%;
+
+    background-color: var(--color-4);
+    color: var(--font-color);
+
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes rotate-in-center {
+    100% {
+        transform: translate(-50%, -50%) rotate(1turn);
+    }
+}
+
+.page-img {
+    max-width: 100%;
+    height: auto;
+
+    box-shadow: 8px 8px 24px 0 rgba(0, 0, 0, 0.39);
+}
+
+.gradient-text {
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ====== Default elements ====== */
+/* */
+h1 {
+    font-size: 62px;
+
+    text-align: center;
+
+    background: var(--gradient-3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    text-align: center;
+}
+

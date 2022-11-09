@@ -1,0 +1,81 @@
+:root {
+    --shrine-entry: var(--color-3);
+
+    --shrine-entry-border-radius: 0.5em;
+}
+
+.shrine-entry {
+    display: grid;
+
+    grid-template-columns: auto 200px;
+
+    background-color: var(--shrine-entry);
+
+    padding: 0.5em;
+
+    border-radius: var(--shrine-entry-border-radius);
+    box-shadow: 4px 4px 24px 0 rgba(0, 0, 0, 0.39);
+}
+
+.shrine-entry-button-area > * {
+    box-shadow: 4px 4px 24px 0 rgba(0, 0, 0, 0.39);
+}
+
+
+.shrine-entry-button-area {
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--color-2);
+    border-radius: var(--shrine-entry-border-radius);
+
+    padding: 1em;
+}
+
+
+.shrine-entry-button {
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--color-2);
+
+    padding: 0.5em;
+    margin: 0.5em 0 0 0;
+
+    text-align: center;
+    color: var(--font-color);
+
+    font-size: var(--font-size-1);
+
+    transition: background-color 0.15s ease-out;
+}
+
+.shrine-entry-button:hover {
+    cursor: pointer;
+    background-color: var(--color-3);
+}
+
+
+.shrine-entry-button-text:after{
+    content: '';
+
+    display:block;
+    border-radius: 1rem;
+
+    height: 0.2rem;
+
+    background: var(--font-color-2);
+
+    transform: scaleX(0);
+
+    transition:
+            transform 0.15s ease-out;
+}
+
+.shrine-entry-button:hover >.shrine-entry-button-text:after{
+    transform: scaleX(1);
+}
+
+.shrine-entry-button-text:hover {
+    color: var(--font-color);
+}

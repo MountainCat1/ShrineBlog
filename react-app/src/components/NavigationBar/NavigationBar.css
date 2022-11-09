@@ -1,0 +1,102 @@
+:root {
+    --navbar-height: 3rem;
+
+    --navbar-item-width: 10rem
+}
+
+/* Disable href text decorations */
+a:link { text-decoration: none; }
+
+a:visited { text-decoration: none; }
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; }
+/* ================================= */
+
+.navigation-bar {
+    position: fixed;
+    overflow: hidden;
+    z-index: 100;
+
+
+    width: 100%;
+    height: var(--navbar-height);
+
+    background-color: var(--color-2);
+
+    box-shadow: 8px 8px 24px 0 rgba(0, 0, 0, 0.39);
+
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-flex {
+    width: var(--page-width);
+    height: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar-flex > * {
+    width: var(--navbar-item-width);
+}
+
+.navbar-button {
+    background-color: var(--color-2);
+
+    position: relative;
+
+    color: var(--font-color-2);
+    text-align: center;
+    font-size: var(--font-size-1);
+
+    border: none;
+
+    cursor: pointer;
+
+    transition:
+            text-shadow 0.06s ease-out,
+            color 0.15s  ease-out,
+            text-shadow 0.1s ease-out;
+}
+
+
+.navbar-button:after{
+    content: '';
+
+    display:block;
+    border-radius: 1rem;
+
+    height: 0.2rem;
+
+    background: var(--gradient-4);
+
+    transform: scaleX(0);
+
+    transition:
+            transform 0.15s ease-in-out;
+}
+
+.navbar-button:hover:after{
+    transform: scaleX(1);
+}
+
+.navbar-button:hover {
+    color: var(--font-color);
+}
+
+.navbar-button:active {
+    text-shadow: 0 0 8px var(--font-color);
+}
+
+/* When navbar button represents active page */
+.navbar-button-active {
+    color: var(--font-color);
+    text-shadow: 0 0 8px hsl(0, 0%, 80%);
+}
+
+
+
