@@ -1,7 +1,9 @@
 import { useSearchParams } from "react-router-dom";
 import React, {useEffect, useState} from "react";
-import {ShrineDto} from "../../types/dtos";
-import {getShrineApi} from "../../services/shrinesApi";
+import {ShrineDto} from "types/dtos";
+import {getShrineApi} from "services/shrinesApi";
+
+import './ShrinePage.css'
 
 export default function (){
     const [searchParams, ] = useSearchParams();
@@ -21,11 +23,10 @@ export default function (){
     return (<div className={'page-content'}>
         <h1>{dto?.name}</h1>
 
-        <p>
+        <img className={'shrine-image'} src={dto?.imageUrl} alt={'shrine image'}/>
+        <span>
             {dto?.description}
-        </p>
-
-        <img src={dto?.imageUrl} alt={'shrine image'}/>
-
+            {dto?.description}
+        </span>
     </div>)
 }

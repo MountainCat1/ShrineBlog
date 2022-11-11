@@ -16,7 +16,7 @@ const ShrineEntry: React.FC<ShrineEntryProps> =(
     return (<div className={'shrine-entry'}>
         <div className={'shrine-entry-text'}>
             <h2>{shrineDto?.name}</h2>
-            <span>{shrineDto?.description}</span>
+            <span>{shrineDto?.shortDescription}</span>
         </div>
         <div className={'shrine-entry-button-area'}>
             <img src={shrineDto?.imageUrl} alt={'shrine image'}/>

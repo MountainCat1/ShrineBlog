@@ -1,0 +1,6 @@
+.shrine-image {
+    float: right;
+
+    margin: 1em;
+    box-shadow: var(--default-shadow);
+}
